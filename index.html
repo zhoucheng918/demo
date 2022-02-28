@@ -2,126 +2,48 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>小米官网</title>
-		<style type="text/css">
+		<title>大小写转化工具</title>
+		<style>
+			html,
 			body {
+				height: 100%;
+				width: 100%;
 				margin: 0;
 			}
 
-			.heard {
-				background-color: #333333;
-				height: 40px;
-				padding: 0px 150px;
-				color: #999;
+			.box {
+				width: 100%;
 			}
-
-			.label-css {
-				color: #999;
-				cursor: pointer;
-				font-size: 12px;
-				line-height: 40px;
-			}
-
-			.label-gwc {
-				background-color: #777;
-				height: 40px;
-				width: 120px;
-				line-height: 40px;
-				text-align: center;
-				color: #fff;
-				font-size: 13px;
-			}
-
-			.label-css:hover {
-				color: #fff;
-			}
-
-			.label-gwc:hover {
-				background-color: #fff;
-				color: #FF6700;
-			}
-
-			.label-css-right {
-				float: right;
-			}
-
-			.line {
-				color: #444;
-				font-size: 9px;
-				margin: 0 2px;
-			}
-			.main{
-				padding: 0px 150px;
-			}
-			.title{
-				height: 80px;
-				line-height: 80px;
-				text-align: center;
-				color: #000;
-				margin-right: 25px;
-			}
-			.m-input{
-				height: 40px;
-				width: 200px;
-				border: 1px solid #000;
-				margin-top: 20px;
-				box-sizing: border-box;
-			}
-			.m-item{
-				position: relative;
-				    display: block;
-				    padding-left: 30px;
-				    height: 42px;
-				    line-height: 42px;
-				    color: #424242;
-					color: #fff;
-			}
-			.m-item:hover{
-				background-color: #FF6700
-				
+			.btn-box{
+				padding: 20px;
+				display: flex;
 			}
 		</style>
 	</head>
 	<body>
-		<div class="heard">
-			<label class="label-css">小米商城</label>
-			<span class="line">|</span>
-			<label class="label-css">MIUI</label>
-			<span class="line">|</span>
-			<label class="label-css">IoT</label>
-			<span class="line">|</span>
-			<label class="label-css">云服务</label>
-			
-			<span class="label-css-right" style="position: relative;padding-right: 140px;">
-				<label class="label-css">云服务</label>
-				<span class="line">|</span>
-				<label class="label-css">云服务2</label>
-				<div class="label-gwc" style="position: absolute;right: 0;top: 0;">购物车(0)</div>
-			</span>
+		<div class="box">
+			<textarea id="v1" class="box" rows="10" cols=""></textarea>
 		</div>
-		
-		<div class="main">
-			<div style="display: flex;padding-left: 170px;">
-				<div class="title">XiaoMi手机</div>
-				<div class="title">XiaoMi手机</div>
-				<div class="title">XiaoMi手机</div>
-				<div class="title">XiaoMi手机</div>
-				<div style="flex:1"></div>
-				<input type="" name="" id="" value=" " class="m-input" />
-				<div style="width: 40px;height: 40px;background: #55AAFF;margin-top: 20px;"></div>
-			</div>
-			
-			<div style="display: flex;">
-				<div style="width: 17%;background-color: #A19F9F;padding: 20px 0;">
-					<div class="m-item">手机</div>
-					<div class="m-item">电视</div>
-					<div class="m-item">平板</div>
-					<div class="m-item">平板2</div>
-				</div>
-				<div style="width: 83%;">
-					<img src="img/1.webp" width="100%" alt="">
-				</div>
-			</div>
+		<div class="btn-box">
+			<button type="button" onclick="click1()">转小写</button>
+			<button type="button" onclick="click2()">转大写</button>
 		</div>
+		<div class="box">
+			<textarea id="v2" class="box" rows="10" cols=""></textarea>
+		</div>
+		<script>
+			function click1(){
+				var v1 = document.querySelector("#v1");
+				var v2 = document.querySelector("#v2");
+				console.log(v1.value);
+				v2.value = v1.value.toString().toLowerCase()
+			}
+			function click2(){
+				var v1 = document.querySelector("#v1");
+				var v2 = document.querySelector("#v2");
+				console.log(v1.value);
+				v2.value = v1.value.toString().toUpperCase()
+			}
+		</script>
 	</body>
 </html>
