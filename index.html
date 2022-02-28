@@ -1,43 +1,127 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="utf-8" />
-		<title>demo网站</title>
-		<style>
-			.btn {
-				background-color: #55aaff;
-				color: #fff;
-				padding: 10px;
-				text-align: center;
-				border-radius: 10px;
+		<meta charset="utf-8">
+		<title>小米官网</title>
+		<style type="text/css">
+			body {
+				margin: 0;
+			}
+
+			.heard {
+				background-color: #333333;
+				height: 40px;
+				padding: 0px 150px;
+				color: #999;
+			}
+
+			.label-css {
+				color: #999;
 				cursor: pointer;
-				margin-top: 10px;
+				font-size: 12px;
+				line-height: 40px;
+			}
+
+			.label-gwc {
+				background-color: #777;
+				height: 40px;
+				width: 120px;
+				line-height: 40px;
+				text-align: center;
+				color: #fff;
+				font-size: 13px;
+			}
+
+			.label-css:hover {
+				color: #fff;
+			}
+
+			.label-gwc:hover {
+				background-color: #fff;
+				color: #FF6700;
+			}
+
+			.label-css-right {
+				float: right;
+			}
+
+			.line {
+				color: #444;
+				font-size: 9px;
+				margin: 0 2px;
+			}
+			.main{
+				padding: 0px 150px;
+			}
+			.title{
+				height: 80px;
+				line-height: 80px;
+				text-align: center;
+				color: #000;
+				margin-right: 25px;
+			}
+			.m-input{
+				height: 40px;
 				width: 200px;
+				border: 1px solid #000;
+				margin-top: 20px;
+				box-sizing: border-box;
+			}
+			.m-item{
+				position: relative;
+				    display: block;
+				    padding-left: 30px;
+				    height: 42px;
+				    line-height: 42px;
+				    color: #424242;
+					color: #fff;
+			}
+			.m-item:hover{
+				background-color: #FF6700
+				
 			}
 		</style>
 	</head>
 	<body>
-		<input type="text" id="input1">
-		<div onclick="a()" class="btn">a按钮</div>
-		<div onclick="b()" class="btn">b按钮</div>
-		<script>
-			init();
-
-			function init() {
-				var doc = document.querySelector('#input1')
-				doc.value = 'ttt';
-			}
-
-			function a() {
-				var doc = document.querySelector('#input1')
-				var val = doc.value
-				alert(++val);
-			}
-
-			function b() {
-				var doc = document.querySelector('#input1')
-				doc.value = 'ccc'
-			}
-		</script>
+		<div class="heard">
+			<label class="label-css">小米商城</label>
+			<span class="line">|</span>
+			<label class="label-css">MIUI</label>
+			<span class="line">|</span>
+			<label class="label-css">IoT</label>
+			<span class="line">|</span>
+			<label class="label-css">云服务</label>
+			
+			<span class="label-css-right" style="position: relative;padding-right: 140px;">
+				<label class="label-css">云服务</label>
+				<span class="line">|</span>
+				<label class="label-css">云服务2</label>
+				<div class="label-gwc" style="position: absolute;right: 0;top: 0;">购物车(0)</div>
+			</span>
+		</div>
+		
+		<div class="main">
+			<div style="display: flex;padding-left: 170px;">
+				<div class="title">XiaoMi手机</div>
+				<div class="title">XiaoMi手机</div>
+				<div class="title">XiaoMi手机</div>
+				<div class="title">XiaoMi手机</div>
+				<div style="flex:1"></div>
+				<input type="" name="" id="" value=" " class="m-input" />
+				<div style="width: 40px;height: 40px;background: #55AAFF;margin-top: 20px;"></div>
+			</div>
+			
+			<div style="display: flex;">
+				<div style="width: 17%;background-color: #A19F9F;padding: 20px 0;">
+					<div class="m-item">手机</div>
+					<div class="m-item">电视</div>
+					<div class="m-item">平板</div>
+					<div class="m-item">平板2</div>
+				</div>
+				<div style="width: 83%;">
+					<img src="img/1.webp" width="100%" alt="">
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
